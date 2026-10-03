@@ -21,6 +21,7 @@ while [ $# -gt 0 ]; do
 done
 DIR="${1:-.}"
 cd "$DIR" || exit 2
+[ -f pubspec.yaml ] || { echo "verify: not a Flutter project (no pubspec.yaml) in $(pwd)" >&2; exit 2; }
 
 OUT=".mobile-agent-proof/$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$OUT"
