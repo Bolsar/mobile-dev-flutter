@@ -11,7 +11,5 @@
     "mobile",
     "flutter"
   ],
-  "skills": [
-    "./skills/"
-  ]
+  "skills": "./skills/"
 }
